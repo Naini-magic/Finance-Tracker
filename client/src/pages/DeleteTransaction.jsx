@@ -16,7 +16,7 @@ const DeleteTransaction = () => {
 
   const fetchTransaction = async () => {
     try {
-      const response = await axios.get(`/api/transactions/${id}`)
+      const response = await axios.get(`https://finance-tracker-y6x1.onrender.com/api/transactions/${id}`)
       setTransaction(response.data)
       setLoading(false)
     } catch (err) {
@@ -30,7 +30,7 @@ const DeleteTransaction = () => {
     setError('')
     
     try {
-      await axios.delete(`/api/transactions/${id}`)
+      await axios.delete(`https://finance-tracker-y6x1.onrender.com/api/transactions/${id}`)
       navigate('/')
     } catch (err) {
       setError('Failed to delete transaction')
