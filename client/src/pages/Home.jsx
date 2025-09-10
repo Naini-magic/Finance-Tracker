@@ -106,7 +106,7 @@ const Home = () => {
 
   const fetchTransactions = async () => {
     try {
-      const response = await axios.get('/api/transactions')
+      const response = await axios.get('https://finance-tracker-y6x1.onrender.com/api/transactions')
       setTransactions(response.data)
       calculateBalance(response.data)
       setLoading(false)
