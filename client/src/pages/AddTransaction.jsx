@@ -13,7 +13,7 @@ const AddTransaction = () => {
     setError('')
     
     try {
-      await axios.post('/api/transactions', transactionData)
+      await axios.post('https://finance-tracker-y6x1.onrender.com/api/transactions', transactionData)
       navigate('/')
     } catch (err) {
       setError('Failed to add transaction')
